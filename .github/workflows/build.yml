@@ -82,7 +82,7 @@ jobs:
       packages: write
     env:
       IMAGE: ghcr.io/drsaeedhub/panel
-      RELEASE_TAG: nats-sync-adf3af0e
+      RELEASE_TAG: nats-sync-029b9f99
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v7
@@ -138,7 +138,7 @@ jobs:
 
           Immutable image reference: \`$(cat image-reference.txt)\`
 
-          Platform: \`linux/amd64\`. Runtime changes are from commit \`adf3af0eef81b4078da15599aa8a69ba32ac3d04\`.
+          Platform: \`linux/amd64\`. Runtime changes are from commit \`029b9f99f5761decf13251859895017ff1821ddf\`.
 
           Validation completed before publication:
           - SQLite, PostgreSQL, TimescaleDB, MySQL, and MariaDB migration and application test suites.
