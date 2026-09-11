@@ -82,7 +82,7 @@ jobs:
       packages: write
     env:
       IMAGE: ghcr.io/drsaeedhub/panel
-      RELEASE_TAG: nats-sync-3c19d701
+      RELEASE_TAG: nats-sync-adf3af0e
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v7
@@ -132,13 +132,13 @@ jobs:
       - name: Publish prerelease
         run: |
           cat > release-notes.md <<EOF
-          Reduce idle NATS queue polling, bound concurrent queue writes, and compact completed synchronization records.
+          Reduce idle NATS queue polling, replay large snapshots in bounded batches, and compact completed synchronization records safely.
 
           Container image: \`$IMAGE:$RELEASE_TAG\`
 
           Immutable image reference: \`$(cat image-reference.txt)\`
 
-          Platform: \`linux/amd64\`. Runtime changes are from commit \`3c19d701a0f88ce5ba3ac67635969e1f8478be56\`.
+          Platform: \`linux/amd64\`. Runtime changes are from commit \`adf3af0eef81b4078da15599aa8a69ba32ac3d04\`.
 
           Validation completed before publication:
           - SQLite, PostgreSQL, TimescaleDB, MySQL, and MariaDB migration and application test suites.
