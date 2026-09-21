@@ -2,6 +2,8 @@ name: Test Database Migrations
 
 on:
     push:
+        branches-ignore:
+            - release/usage-breakdown
         paths:
             - "**.py"
             - ".github/workflows/test-database-migrations.yml"
@@ -12,6 +14,11 @@ on:
             - "pyproject.toml"
             - ".github/workflows/test-database-migrations.yml"
     workflow_dispatch:
+    workflow_call:
+
+env:
+    DEBUG: "false"
+    TZ: UTC
 
 jobs:
     test-sqlite:
