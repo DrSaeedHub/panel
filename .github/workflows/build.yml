@@ -83,7 +83,7 @@ jobs:
       packages: write
     env:
       IMAGE: ghcr.io/drsaeedhub/panel
-      RELEASE_TAG: usage-breakdown-8f983aeb
+      RELEASE_TAG: usage-breakdown-a453dcb1
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v7
@@ -139,7 +139,7 @@ jobs:
 
           Immutable image reference: \`$(cat image-reference.txt)\`
 
-          Platform: \`linux/amd64\`. Runtime changes are from commit \`8f983aeb5f91d05ad67d1d119b14c8665a231bbb\` on top of upstream \`dev\`.
+          Platform: \`linux/amd64\`. Runtime changes are from commit \`a453dcb182552ed3affbbb280c451b8e8e66bb83\` on top of upstream \`dev\`.
 
           Validation completed before publication:
           - SQLite, PostgreSQL, TimescaleDB, MySQL, and MariaDB migration and application test suites.
